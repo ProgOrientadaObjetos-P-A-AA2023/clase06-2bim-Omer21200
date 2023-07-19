@@ -22,7 +22,6 @@ public class Principal2 {
 
         // 1. guardar en la tabla autos de la base de datos
         Enlace c = new Enlace();
-        c.establecerLista();
 
         for (int i = 0; i < autos.length; i++) {
             Auto a = new Auto();
@@ -30,7 +29,7 @@ public class Principal2 {
             a.establecerValorMatricula(Double.parseDouble(autos[i][1]));
             c.insertarAuto(a);
         }
-
+        c.establecerLista();
         // 2. presentar todos los registros de la tabla autos de la base de 
         // datos
         for (int i = 0; i < c.obtenerDataAuto().size(); i++) {
